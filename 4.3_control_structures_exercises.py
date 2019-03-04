@@ -106,27 +106,48 @@ print(line)
 
 #2c - BREAK and CONTINUE
 
-number = input('Enter a number between 1 and 50: ')
-while not number.isdigit():
-	number = input('Enter a number between 1 and 50: ')
-while not (int(number) > 0 and int(number) < 51):
-	number = input('Enter a number between 1 and 50: ')
-while (int(number) % 2) == 0:
-	number = input('Enter a number between 1 and 50: ')
-print('The number to skip is: '+ number)
-print()
-for i in range(1,51,2):
-	if i == int(number):
-		print('Yikes! Skipping number: ' + str(i))
-		continue
-	print('Here is an odd number: ' + str(i))
+# number = input('Enter a number between 1 and 50: ')
+# while not number.isdigit():
+# 	number = input('Enter a number between 1 and 50: ')
+# while not (int(number) > 0 and int(number) < 51):
+# 	number = input('Enter a number between 1 and 50: ')
+# while (int(number) % 2) == 0:
+# 	number = input('Enter a number between 1 and 50: ')
+# print('The number to skip is: '+ number)
+# print()
+# for i in range(1,51,2):
+# 	if i == int(number):
+# 		print('Yikes! Skipping number: ' + str(i))
+# 		continue
+# 	print('Here is an odd number: ' + str(i))
 
+# number = input('Enter a positive number: ')
+# while not number.isdigit():
+# 	number = input('Not a positive number. Enter a positive number:  ')
+# while not (int(number) > 0):
+# 	number = input('Not a positive number. Enter a positive number:  ')
+# for i in range(0,int(number)+1):
+# 	print(i)
 
+# number = input('Enter a positive number: ')
+# while not number.isdigit():
+# 	number = input('Not a positive number. Enter a positive number:  ')
+# while not (int(number) > 0):
+# 	number = input('Not a positive number. Enter a positive number:  ')
+# for i in range(int(number),0, -1):
+# 	print(i)
 
-
-
-
-
+# for i in range(0,101):
+# 	if i % 3 == 0 and i % 5 == 0:
+# 		print('FizzBuzz')
+# 		continue
+# 	if i % 3 == 0:
+# 		print('Fizz')
+# 		continue
+# 	if i % 5 == 0:
+# 		print('Buzz')
+# 		continue
+# 	print(i)
 
 
 
