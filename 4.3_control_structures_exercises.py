@@ -65,6 +65,7 @@ print(line)
 print(line)
 
 
+
 # 2a - WHILE LOOPS
 
 # i = 5
@@ -101,14 +102,25 @@ print(line)
 # for i in range(10):
 # 	print(str(i)*i)
 
+
+
 #2c - BREAK and CONTINUE
 
 number = input('Enter a number between 1 and 50: ')
 while not number.isdigit():
 	number = input('Enter a number between 1 and 50: ')
-while not (float(number) > 0 and float(number) < 51):
+while not (int(number) > 0 and int(number) < 51):
 	number = input('Enter a number between 1 and 50: ')
-print(number)
+while (int(number) % 2) == 0:
+	number = input('Enter a number between 1 and 50: ')
+print('The number to skip is: '+ number)
+print()
+for i in range(1,51,2):
+	if i == int(number):
+		print('Yikes! Skipping number: ' + str(i))
+		continue
+	print('Here is an odd number: ' + str(i))
+
 
 
 
