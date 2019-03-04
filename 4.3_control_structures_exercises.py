@@ -137,6 +137,10 @@ print(line)
 # for i in range(int(number),0, -1):
 # 	print(i)
 
+
+
+# 3 - FIZZBUZZ
+
 # for i in range(0,101):
 # 	if i % 3 == 0 and i % 5 == 0:
 # 		print('FizzBuzz')
@@ -151,11 +155,51 @@ print(line)
 
 
 
+# 4 - TABLE OF POWERS
+
+# go_on = 'y'
+# while go_on == 'y':
+# 	number = input('What number would you like to go up to? ')
+# 	print()
+# 	print('Here is your table!')
+# 	print()
+# 	print('number \t \t| squared | cubed')
+# 	print('------ \t \t| ------  | ------')
+# 	for i in range(1, int(number)+1):
+# 		print(f'{i} \t \t| {i ** 2} \t \t| {i ** 3}')
+# 	go_on = input('Would you like to continue? [y/N] ')
+# 	if go_on == 'y':
+# 		print()
+# 		continue
+# print()
+# print('Thank you; good bye!')
 
 
 
+# 5 - NUMBER TO LETTER GRADES
 
-
+go_on = 'y'
+while go_on == 'y':
+	number_grade = input('Enter a number grade between 0 to 100: ')
+	number_grade = int(number_grade)
+	if number_grade < 60:
+		letter_grade = 'F'
+	elif number_grade >= 60 and number_grade <= 66:
+		letter_grade = 'D'
+	elif number_grade >=67 and number_grade <= 79:
+		letter_grade = 'C'
+	elif number_grade >= 80 and number_grade <= 87:
+		letter_grade = 'B'
+	else:
+		letter_grade = 'A'
+	print('Letter grade is: ' + letter_grade)
+	print()
+	go_on = input('Would you like to continue? [y/N] ')
+	if go_on == 'y':
+		print()
+		continue
+print()
+print('Thank you; good bye!')
 
 
 
