@@ -178,30 +178,77 @@ print(line)
 
 # 5 - NUMBER TO LETTER GRADES
 
-go_on = 'y'
-while go_on == 'y':
-	number_grade = input('Enter a number grade between 0 to 100: ')
-	number_grade = int(number_grade)
-	if number_grade < 60:
-		letter_grade = 'F'
-	elif number_grade >= 60 and number_grade <= 66:
-		letter_grade = 'D'
-	elif number_grade >=67 and number_grade <= 79:
-		letter_grade = 'C'
-	elif number_grade >= 80 and number_grade <= 87:
-		letter_grade = 'B'
-	else:
-		letter_grade = 'A'
-	print('Letter grade is: ' + letter_grade)
+# go_on = 'y'
+# while go_on == 'y':
+# 	number_grade = input('Enter a number grade between 0 to 100: ')
+# 	number_grade = int(number_grade)
+# 	if number_grade < 60:
+# 		letter_grade = 'F'
+# 	elif number_grade >= 60 and number_grade <= 66:
+# 		letter_grade = 'D'
+# 	elif number_grade >=67 and number_grade <= 79:
+# 		letter_grade = 'C'
+# 	elif number_grade >= 80 and number_grade <= 87:
+# 		letter_grade = 'B'
+# 	else:
+# 		letter_grade = 'A'
+# 	print('Letter grade is: ' + letter_grade)
+# 	print()
+# 	go_on = input('Would you like to continue? [y/N] ')
+# 	if go_on == 'y':
+# 		print()
+# 		continue
+# print()
+# print('Thank you; good bye!')
+
+
+
+# 6 - DD'S LIBRARY OF BOOKS
+
+books = [
+	{	'title':'Python Data Analysis',
+		'author':'Fabio Nelli',
+		'genre':'Python' },
+	{	'title':'Adventures in Minecraft',
+		'author':'David Whale',
+		'genre':'Minecraft' },
+	{	'title':'Raspberry Pi By Examples',
+		'author':'Ashwin Pajankar',
+		'genre':'Raspberry Pi' },
+	{	'title':'Python Data Analysis 2',
+		'author':'Fabio Nelli',
+		'genre':'Python' },
+	{	'title':'Adventures in Minecraft 2',
+		'author':'David Whale',
+		'genre':'Minecraft' },
+	{	'title':'Raspberry Pi By Examples 2',
+		'author':'Ashwin Pajankar',
+		'genre':'Raspberry Pi' },
+	{	'title':'Python Data Analysis 3',
+		'author':'Fabio Nelli',
+		'genre':'Python' },
+	{	'title':'Adventures in Minecraft 3',
+		'author':'David Whale',
+		'genre':'Minecraft' },
+	{	'title':'Raspberry Pi By Examples 3',
+		'author':'Ashwin Pajankar',
+		'genre':'Raspberry Pi' }
+]
+
+for i in range (0,len(books)):
+	print('Title: ' + books[i]['title'])
+	print('Author: ' + books[i]['author'])
+	print('Genre: ' + books[i]['genre'])
 	print()
-	go_on = input('Would you like to continue? [y/N] ')
-	if go_on == 'y':
-		print()
-		continue
+
+user_genre = input('Enter a genre: (Python, Minecraft, or Raspberry Pi): ')
 print()
-print('Thank you; good bye!')
-
-
+for i in range (0,len(books)):
+	if books[i]['genre'] == user_genre:
+		print('Title: ' + books[i]['title'])
+		print('Author: ' + books[i]['author'])
+		print('Genre: ' + books[i]['genre'])
+		print()
 
 
 
