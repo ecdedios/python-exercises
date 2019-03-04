@@ -98,8 +98,33 @@ print(line)
 # for i in range(11):
 # 	print(f'{number} x {i} = ' + str((float(number)*i)))
 
-for i in range(10):
-	print(str(i)*i)
+# for i in range(10):
+# 	print(str(i)*i)
+
+#2c - BREAK and CONTINUE
+
+number = input('Enter a number between 1 and 50: ')
+while not number.isdigit():
+	number = input('Enter a number between 1 and 50: ')
+while not (float(number) > 0 and float(number) < 51):
+	number = input('Enter a number between 1 and 50: ')
+print(number)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
