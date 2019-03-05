@@ -4,6 +4,7 @@
 
 ## Contents:
 - 4.3_control_structures_exercises.py
+- 4.4_function_exercises.py
 
 
 ## Usage
