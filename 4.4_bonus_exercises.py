@@ -62,4 +62,51 @@ separator()
 # -- col_index('B') returns 2
 # -- col_index('AA') returns 27
 
- 
+def col_index(column_name):
+    x = column_name[0:1].lower()
+
+    #index_number = 0
+    i = 0
+
+    for letter in column_name:
+        index_number = ((ord(letter.lower())-96)+26*i)
+        i += 1
+    return index_number
+
+print(col_index('ABC'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

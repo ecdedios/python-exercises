@@ -15,7 +15,7 @@ For Jupyter notebooks, go to directory and open ``.ipynb`` files in Jupyter.
 
 ## Blurbs
 
-- Make mistakes!
+- Make mistakes! 
 - Positional, splat, keyword
 
 
