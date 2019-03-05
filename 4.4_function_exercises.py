@@ -178,21 +178,3 @@ list_of_numbers = [1,2,3,4,5,1,1,1,1,1,1,]
 cumsum(list_of_numbers)
 
 separator()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
