@@ -62,4 +62,4 @@ separator()
 # -- col_index('B') returns 2
 # -- col_index('AA') returns 27
 
- 6
+ 
