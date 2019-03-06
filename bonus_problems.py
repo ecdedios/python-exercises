@@ -37,14 +37,14 @@ def multiply_no_splat(x, y):
 # print(multiply_no_splat_no_loop(1, 4))
 
 
-def bonbon(base, multiplier, i=0, product=0):
+def multiply_no_splat_no_loop(base, multiplier, i=0, product=0):
     i += 1
     product += base
     if i == multiplier + 1:
         return product - base
     else:
         print('i: '+str(i)+' product: '+str(product))
-    return bonbon(base, multiplier, i, product)
+    return multiply_no_splat_no_loop(base, multiplier, i, product)
 
 
-print('PRODUCT: '+str(bonbon(2, 3,)))
+print('PRODUCT: '+str(multiply_no_splat_no_loop(2, 3,)))
