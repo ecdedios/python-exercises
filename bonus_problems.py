@@ -1,0 +1,50 @@
+# 1. Write a function named `add`. It should accept two arguments and return the result of adding the two arguments together.
+def add(x, y):
+    return x + y
+
+# 2. Write a function named `subtract`. It should accept two arugments and return the result of subtracting the first from the second.
+
+
+def substract(x, y):
+    return y - x
+
+
+# 3. Write a function named `multiply`. It should accept two numbers and return the result of multiplying them together.
+def multiply(x, y):
+    return x * y
+
+
+# Bonus: don't use the `*` operator in your `multiply` function
+def multiply_no_splat(x, y):
+    i = 0
+    for i in range(y + 1):
+        i + i
+    return i
+
+
+# Bonus Bonus: don't use a loop in your `multiply` function
+# def multiply_no_splat_no_loop(x, y, z=0, a=0):
+#     z += 1
+#     a + a
+#     if z >= y:
+#         print('1st Z: '+str(z)+' A: '+str(a))
+#         return a
+#     else:
+#         z = x + x
+#         print('2nd: '+str(z)+' A: '+str(a))
+#         return multiply_no_splat_no_loop(x, y, z)
+
+# print(multiply_no_splat_no_loop(1, 4))
+
+
+def bonbon(base, multiplier, i=0, product=0):
+    i += 1
+    product += base
+    if i == multiplier + 1:
+        return product - base
+    else:
+        print('i: '+str(i)+' product: '+str(product))
+    return bonbon(base, multiplier, i, product)
+
+
+print('PRODUCT: '+str(bonbon(2, 3,)))
