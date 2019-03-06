@@ -144,15 +144,15 @@ separator()
 
 
 def remove_vowels(word):
-    new_word = word
+    new_word = word.lower()
     vowels = ('a', 'e', 'i', 'o', 'u',)
-    for x in word.lower():
+    for x in word:
         if x in vowels:
             new_word = new_word.replace(x, '')
     return new_word
 
 
-print(remove_vowels('abracadabra'))
+print(remove_vowels('AAAAAbracadabra'))
 
 separator()
 
