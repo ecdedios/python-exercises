@@ -1,9 +1,11 @@
 # Bonus Exercises
 
+
 def separator():
     print()
     print('--------------------------------------------------')
     print()
+
 
 separator()
 
@@ -11,6 +13,7 @@ separator()
 # format 10:45am or 4:30pm and return a string that is the
 # representation of the time in a 24-hour format. Bonus write a
 # function that does the opposite.
+
 
 def twelveto24(time):
     hour = time[:-5]  # hour
@@ -27,6 +30,7 @@ def twelveto24(time):
 
     return new_time
 
+
 print('12:30pm --> ' + twelveto24('12:30pm') + ' hours')
 print('4:30am --> ' + twelveto24('4:30am') + ' hours')
 print('10:30am --> ' + twelveto24('10:30am') + ' hours')
@@ -35,10 +39,11 @@ print('4:30pm --> ' + twelveto24('4:30pm') + ' hours')
 
 separator()
 
+
 def twentyfourto12(time):
     string_time = str(time)
-    hour = string_time[:2] # hour
-    minute = string_time[2:] # minute
+    hour = string_time[:2]  # hour
+    minute = string_time[2:]  # minute
     new_hour = int(hour)
     new_minute = int(minute)
     if new_hour > 12:
@@ -46,10 +51,11 @@ def twentyfourto12(time):
         designator = 'pm'
     else:
         designator = 'am'
-    
+
     new_time = str(new_hour) + ':' + str(new_minute) + designator
 
     return new_time
+
 
 print('0340 --> ' + twentyfourto12('0340'))
 print('1340 --> ' + twentyfourto12('1340'))
@@ -62,6 +68,7 @@ separator()
 # -- col_index('B') returns 2
 # -- col_index('AA') returns 27
 
+
 def col_index(column_name):
     x = column_name[0:1].lower()
 
@@ -69,44 +76,10 @@ def col_index(column_name):
     i = 0
 
     for letter in column_name:
-        index_number = ((ord(letter.lower())-96)+26*i)
+        # TODO: Need to fix formula to account for base 26
+        index_number = ((ord(letter.lower())-96) + 26 ** i)
         i += 1
     return index_number
 
+
 print(col_index('ABC'))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

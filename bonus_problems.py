@@ -22,21 +22,6 @@ def multiply_no_splat(x, y):
     return i
 
 
-# Bonus Bonus: don't use a loop in your `multiply` function
-# def multiply_no_splat_no_loop(x, y, z=0, a=0):
-#     z += 1
-#     a + a
-#     if z >= y:
-#         print('1st Z: '+str(z)+' A: '+str(a))
-#         return a
-#     else:
-#         z = x + x
-#         print('2nd: '+str(z)+' A: '+str(a))
-#         return multiply_no_splat_no_loop(x, y, z)
-
-# print(multiply_no_splat_no_loop(1, 4))
-
-
 def multiply_no_splat_no_loop(base, multiplier, i=0, product=0):
     i += 1
     product += base
