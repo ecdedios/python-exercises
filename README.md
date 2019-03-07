@@ -6,6 +6,7 @@
 - 4.3_control_structures_exercises.py
 - 4.4_bonus_exercises.py
 - 4.4_function_exercises.py
+- 4.5_import_exercises.py
 
 
 ## Usage
