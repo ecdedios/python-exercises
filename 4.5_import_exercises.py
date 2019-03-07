@@ -98,7 +98,7 @@ print('Least favorite fruit: ' + str(least_common_values(fruit_list, 1)))
 greeting_list = []
 unread_total = 0
 for row in data:
-    greeting_list.append(re.sub("\D", "", row['greeting']))
-    unread_total += int(re.sub("\D", "", row['greeting']))
+    greeting_list.append(re.sub("\\D", "", row['greeting']))
+    unread_total += int(re.sub("\\D", "", row['greeting']))
 
 print('Total number of unread messages: ' + str(unread_total))
