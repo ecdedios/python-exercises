@@ -71,6 +71,8 @@ separator()
 # -- col_index('B') returns 2
 # -- col_index('AA') returns 27
 
+# https://stackoverflow.com/questions/48983939/convert-a-number-to-excel-s-base-26
+
 
 def col_index(chars):
     return reduce(lambda r, x: r * 26 + x + 1, map(string.ascii_uppercase.index, chars), 0)
