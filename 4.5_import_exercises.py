@@ -83,8 +83,7 @@ fruit_list = []
 for row in data:
     fruit_list.append(row['favoriteFruit'])
 
-print(s.mode(fruit_list))
-
+print('Most favorite fruit: ' + str(s.mode(fruit_list)))
 
 def least_common_values(array, to_find=None):
     counter = collections.Counter(array)
@@ -102,3 +101,11 @@ for row in data:
     unread_total += int(re.sub("\\D", "", row['greeting']))
 
 print('Total number of unread messages: ' + str(unread_total))
+
+print()
+print()
+
+
+
+print()
+print()
