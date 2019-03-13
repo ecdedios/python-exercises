@@ -1,11 +1,13 @@
 import numpy as np
 import math
 
+
 a = np.array([4, 10, 12, 23, -2, -1, 0, 0, 0, -6, 3, -7])
 
 negative_numbers = (a < 0).sum()
 positive_numbers = (a > 0).sum()
 even_positive_numbers = (((a[a>0]) % 2 == 0).sum())
+# evens[evens > 0]
 positive_numbers_plus_three = ((a + 3) > 0).sum()
 new_mean = (a ** 2).mean()
 new_stdev = (a ** 2).std()
@@ -55,6 +57,7 @@ print(max_of_a)
 
 
 # Exercise 4 - Make a variable named mean_of_a to hold the average of all the numbers in the above list
+#
 mean_of_a = 0
 for i in a:
 	mean_of_a += i
@@ -83,6 +86,7 @@ for n in a:
 	if n % 2 != 0:
 		odds_in_a.append(n)
 print(odds_in_a)
+# n for n in a if n % 2 == 1
 
 
 # Exercise 8 - Make a variable named evens_in_a. It should hold only the evens.
@@ -91,6 +95,7 @@ for n in a:
 	if n % 2 == 0:
 		evens_in_a.append(n)
 print(evens_in_a)
+# n for n in a if n % 2 == 0
 
 
 ## What about life in two dimensions? A list of lists is matrix, a table, a spreadsheet, a chessboard...
@@ -144,28 +149,29 @@ print(b.prod())
 
 
 # Exercise 6 - refactor the following to use numpy to find the list of squares 
-squares_of_b = []
-for row in b:
-    for number in row:
-        squares_of_b.append(number**2)
+# squares_of_b = []
+# for row in b:
+#     for number in row:
+#         squares_of_b.append(number**2)
+print(b ** 2)
 
 
 # Exercise 7 - refactor using numpy to determine the odds_in_b
-odds_in_b = []
-for row in b:
-    for number in row:
-        if(number % 2 != 0):
-            odds_in_b.append(number)
-print(odds_in_a)
+# odds_in_b = []
+# for row in b:
+#     for number in row:
+#         if(number % 2 != 0):
+#             odds_in_b.append(number)
+print(b[b % 2 == 1])
 
 
 # Exercise 8 - refactor the following to use numpy to filter only the even numbers
-evens_in_b = []
-for row in b:
-    for number in row:
-        if(number % 2 == 0):
-            evens_in_b.append(number)
-print(evens_in_a)
+# evens_in_b = []
+# for row in b:
+#     for number in row:
+#         if(number % 2 == 0):
+#             evens_in_b.append(number)
+print(b[b % 2 == 0])
 
 
 
@@ -173,13 +179,15 @@ print(evens_in_a)
 # Exercise 9 - print out the shape of the array b.
 print(b.shape)
 
-
 # Exercise 10 - transpose the array b.
 print(b.transpose())
+print(b.T)
+
 
 
 # Exercise 11 - reshape the array b to be a single list of 6 numbers. (1 x 6)
 print(b.reshape(1,6))
+#print(b.reshape(6))
 
 
 # Exercise 12 - reshape the array b to be a list of 6 lists, each containing only 1 number (6 x 1)
@@ -206,23 +214,30 @@ print(c.prod())
 # Exercise 2 - Determine the standard deviation of c.
 print(c.std())
 
+print('======================================================')
 # Exercise 3 - Determine the variance of c.
 print(c.var())
+print(c.std() ** 2)
+print('======================================================')
 
 # Exercise 4 - Print out the shape of the array c
 print(c.shape)
 
 # Exercise 5 - Transpose c and print out transposed result.
 print(c.transpose())
+print(c.T)
 
 # Exercise 6 - Multiply c by the c-Transposed and print the result.
 print(c*c.transpose())
+print(c*c.T)
 
 # Exercise 7 - Write the code necessary to sum up the result of c times c transposed. Answer should be 261
 print((c*c.transpose()).sum())
+print(c*c.T.sum())
 
 # Exercise 8 - Write the code necessary to determine the product of c times c transposed. Answer should be 131681894400.
 print((c*c.transpose()).prod())
+print(c * c.T.prod())
 
 
 
