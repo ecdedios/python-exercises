@@ -259,7 +259,7 @@ print(np.unique(d))
 
 
 # Exercise 7 - Determine how many unique numbers there are in d.
-print(np.unique(d).sum())
+print(str(len(np.unique(d))))
 
 
 # Exercise 8 - Print out the shape of d.
