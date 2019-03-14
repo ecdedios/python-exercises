@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 print('#1 --------------------------------------------------')
 
@@ -81,7 +82,35 @@ print(mammals_df.hoppers.sum()/mammals_df.hoppers.count()*100)
 
 print('#4 --------------------------------------------------')
 
+# Create a function named get_db_url. It should accept a username, hostname, password, and database name and return a url formatted like in the examples in this lesson.
+def get_db_url(db, user, host, password):
+    from sqlalchemy import create_engine
+    url = f'mysql+pymysql://{user}:{password}@{host}/employees'
+    return create_engine(url)
 
+
+# Use your function to obtain a connection to the employees database.
+from env import user, host, password
+conn = get_db_url('employees', user, host, password)
+
+
+# Read the employees and titles tables into two separate data frames
+employees_df = pd.read_sql('SELECT * FROM employees;', conn)
+titles_df = pd.read_sql('SELECT * FROM titles;', conn)
+
+# Visualize the number of employees with each title.
+new_df = titles_df.groupby('title').size()
+print(new_df)
+
+plot = new_df.plot()
+plt.show()
+
+
+# Visualize how frequently employees change titles.
+
+# Use the .join method to join the employees and titles data frames together
+
+# For each title, find the hire date of the employee that was hired most recently with that title.
 
 
 
